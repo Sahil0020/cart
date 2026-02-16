@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CardService {
     List<Cart> getorder();
+
+    Cart getorderById(Long orderId);
 }

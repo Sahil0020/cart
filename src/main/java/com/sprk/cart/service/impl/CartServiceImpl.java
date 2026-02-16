@@ -17,4 +17,10 @@ public class CartServiceImpl implements CardService {
         List<Cart> cart=repository.findAll();
         return cart;
     }
+
+    @Override
+    public Cart getorderById(Long orderId) {
+        Cart cart=repository.findById(orderId).orElseThrow(()-> new RuntimeException("order id not found"));
+        return cart;
+    }
 }
